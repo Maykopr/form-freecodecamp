@@ -1,0 +1,11 @@
+{
+  "name": "fcc-survey-form",
+  "version": "1.0.0",
+  "description": "A simple form for freeCodeCamp",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mayko Costa",
+  "license": "MIT"
+}
