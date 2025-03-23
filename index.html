@@ -1,91 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;500&family=Poppins:ital,wght@0,200;0,300;1,100&display=swap"
+			rel="stylesheet"
+		/>
+		<title>MyCopyOf-freeCodeCamp</title>
+	</head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;500&family=Poppins:ital,wght@0,200;0,300;1,100&display=swap"
-    rel="stylesheet">
-  <title>MyCopyOf-freeCodeCamp</title>
-</head>
+	<body>
+		<div class="container">
+			<div class="header">
+				<h1 id="title" class="header__title">Enquete do freeCodeCamp</h1>
+				<p id="description" class="header__subtitle">Obrigado por nos ajudar a melhorar a plataforma!</p>
+			</div>
 
-<body>
-  <div class='container'>
-    <div class="header">
-      <h1 id="title" class="header__title">Enquete do freeCodeCamp</h1>
-      <p id="description" class="header__subtitle">Obrigado por nos ajudar a melhorar a plataforma!</p>
-    </div>
+			<form id="survey-form" class="form">
+				<fieldset class="personal-area">
+					<label for="name" id="name-label">Nome</label>
+					<input
+						class="input-control"
+						id="name"
+						name="name"
+						type="text"
+						placeholder="Digite seu nome"
+						required
+					/>
+					<label for="email" id="email-label">Email</label>
+					<input
+						class="input-control"
+						id="email"
+						name="email"
+						type="email"
+						placeholder="Digite seu e-mail"
+						required
+					/>
+					<label for="number" id="number-label">Idade <span class="comments">(opcional)</span></label>
+					<input
+						class="input-control"
+						id="number"
+						name="number"
+						type="number"
+						min="1"
+						max="120"
+						placeholder="Sua idade"
+					/>
+					<label for="dropdown">Qual opção melhor descreveria sua carreira no momento?</label>
+				</fieldset>
 
-    <form id="survey-form" class="form">
+				<fieldset class="select-area">
+					<select class="input-control" id="dropdown" required>
+						<option disabled selected value>Selecione uma opção</option>
+						<option>Estudante</option>
+						<option>Estudante em tempo integral</option>
+						<option>Trabalho em tempo integral</option>
+						<option>Prefiro não dizer</option>
+						<option>Outro</option>
+					</select>
+				</fieldset>
 
-      <div class="personal-area">
-        <label for="name" id="name-label">Nome</label>
-        <input class="input-control" id="name" name="name" type="text" placeholder="Digite seu nome" required />
-        <label for="email" id="email-label">Email</label>
-        <input class="input-control" id="email" name="email" type="email" placeholder="Digite seu e-mail" required />
-        <label for="number" id="number-label">Idade <span class="comments">(opcional)</span></label>
-        <input class="input-control" id="number" name="number" type="number" min="1" max="120" placeholder="Sua idade" />
-        <label for="dropdown">Qual opção melhor descreveria sua carreira no momento?</label>
-      </div>
+				<fieldset class="radio-area">
+					<label>Você recomendaria o freeCodeCamp a um amigo?</label>
+					<label for="certeza"
+						><input class="input-radio" type="radio" value="certeza" name="option" id="certeza" checked />
+						Com certeza</label
+					>
+					<label for="talvez"
+						><input class="input-radio" type="radio" value="talvez" name="option" id="talvez" />
+						Talvez</label
+					>
+					<label for="nao"
+						><input class="input-radio" type="radio" value="nao" name="option" id="nao" /> Infelizmente
+						não</label
+					>
+				</fieldset>
 
-      <div class="select-area"></div>
-        <select class="input-control" id="dropdown" required>
-          <option disabled selected value>Selecione uma opção</option>
-          <option>Estudante</option>
-          <option>Estudante em tempo integral</option>
-          <option>Trabalho em tempo integral</option>
-          <option>Prefiro não dizer</option>
-          <option>Outro</option>
-        </select>
-      <div>
-      
-      <div class="radio-area">
-        <label>Você recomendaria o freeCodeCamp a um amigo?</label>
-        <label for="certeza"><input class="input-radio" type="radio" value="certeza" name="option" id="certeza"
-            checked /> Com
-          certeza</label>
-        <label for="talvez"><input class="input-radio" type="radio" value="talvez" name="option" id="talvez" />
-          Talvez</label>
-        <label for="nao"><input class="input-radio" type="radio" value="nao" name="option" id="nao" /> Infelizmente
-          não</label>
-     </div>
+				<fieldset class="select-area">
+					<label for="dropdown-2">Qual é a melhor característica do freeCodeCamp?</label>
+					<select class="input-control" id="dropdown-2" required>
+						<option>Selecione uma opção</option>
+						<option>Desafios</option>
+						<option>Projetos</option>
+						<option>Comunidade</option>
+						<option>Código aberto</option>
+					</select>
+				</fieldset>
 
-      <div class="select-area">
-        <label for="dropdown-2">Qual é a melhor característica do freeCodeCamp?</label>
-        <select class="input-control" id="dropdown-2" required>
-          <option>Selecione uma opção</option>
-          <option>Desafios</option>
-          <option>Projetos</option>
-          <option>Comunidade</option>
-          <option>Código aberto</option>
-        </select>
-      </div>
+				<fieldset class="checkbox-area">
+					<label
+						>O que você gostaria que melhorasse?
+						<span class="comments-decoration"> (Marque tudo que se aplica)</span></label
+					>
+					<label for="ch1"
+						><input class="input-checkbox" type="checkbox" value="1" id="ch1" />Front-End</label
+					>
+					<label for="ch2"><input class="input-checkbox" type="checkbox" value="2" id="ch2" />Back-End</label>
+					<label for="ch3"
+						><input class="input-checkbox" type="checkbox" value="3" id="ch3" />Data Visualization</label
+					>
+					<label for="ch4"><input class="input-checkbox" type="checkbox" value="4" id="ch4" />Desafios</label>
+					<label for="ch5"
+						><input class="input-checkbox" type="checkbox" value="5" id="ch5" />Comunidade 'Open
+						Source'</label
+					>
+					<label for="ch6"
+						><input class="input-checkbox" type="checkbox" value="6" id="ch6" />Salas de ajuda</label
+					>
+					<label for="ch7"><input class="input-checkbox" type="checkbox" value="7" id="ch7" />Vídeos</label>
+					<label for="ch8"
+						><input class="input-checkbox" type="checkbox" value="8" id="ch8" />Encontros</label
+					>
+					<label for="ch9"><input class="input-checkbox" type="checkbox" value="9" id="ch9" />Wiki</label>
+					<label for="ch10"><input class="input-checkbox" type="checkbox" value="10" id="ch10" />Fórum</label>
+					<label for="ch11"
+						><input class="input-checkbox" type="checkbox" value="11" id="ch11" />Cursos adicionais</label
+					>
+				</fieldset>
 
-      <div class="checkbox-area">
-        <label>O que você gostaria que melhorasse? <span class="comments-decoration"> (Marque tudo que se aplica)</span></label>
-        <label for="ch1"><input class="input-checkbox" type="checkbox" value="1" id="ch1" />Front-End</label>
-        <label for="ch2"><input class="input-checkbox" type="checkbox" value="2" id="ch2" />Back-End</label>
-        <label for="ch3"><input class="input-checkbox" type="checkbox" value="3" id="ch3" />Data Visualization</label>
-        <label for="ch4"><input class="input-checkbox" type="checkbox" value="4" id="ch4" />Desafios</label>
-        <label for="ch5"><input class="input-checkbox" type="checkbox" value="5" id="ch5" />Comunidade 'Open Source'</label>
-        <label for="ch6"><input class="input-checkbox" type="checkbox" value="6" id="ch6" />Salas de ajuda</label>
-        <label for="ch7"><input class="input-checkbox" type="checkbox" value="7" id="ch7" />Vídeos</label>
-        <label for="ch8"><input class="input-checkbox" type="checkbox" value="8" id="ch8" />Encontros</label>
-        <label for="ch9"><input class="input-checkbox" type="checkbox" value="9" id="ch9" />Wiki</label>
-        <label for="ch10"><input class="input-checkbox" type="checkbox" value="10" id="ch10" />Fórum</label>
-        <label for="ch11"><input class="input-checkbox" type="checkbox" value="11" id="ch11" />Cursos adicionais</label>
-      </div>
+				<fieldset class="text-area">
+					<label abel for="dropdown-2">Deixe seu cometário ou sugestão</label>
+					<textarea class="input-textarea"></textarea>
+				</fieldset>
 
-      <div class="text-area">
-        <label  abel for="dropdown-2">Deixe seu cometário ou sugestão</label>
-        <textarea class="input-textarea"></textarea>
-      </div>
-
-      <button type="submit" id="submit" class="submit-btn">Submit</button>
-    </form>
-  </div>
-</body>
+				<button type="submit" id="submit" class="submit-btn">Submit</button>
+			</form>
+		</div>
+	</body>
+</html>
